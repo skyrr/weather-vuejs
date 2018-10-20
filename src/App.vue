@@ -4,8 +4,8 @@
     <p>
       Weather<br>
     </p>
-    <p>{{ info.data.name }}1</p>
-    <p>{{ info.data.main.temp }}1</p>
+    <p>{{ info.data }}1</p>
+    <!--<p>{{ info.data.main.temp }}1</p>-->
     <autocomplete :items= items  />
   </div>
 </template>
@@ -24,12 +24,12 @@
         data() {
             return {
                 info: null,
-                items: ['Apple', 'Banana', 'Orange', 'Mango', 'Pear', 'Peach', 'Grape', 'Tangerine', 'Pineapple']
+                items: [ 'Germany', 'Mango', 'Pear', 'Peach', 'Grape', 'Tangerine', 'Pineapple']
             };
         },
         mounted() {
             axios
-                .get('http://localhost:51262/api/weather/weather?city=6548737')
+                .get('http://localhost:51262/api/weather/deCity?city=leip')
                 .then(response => (this.info = response));
         }
     }

@@ -21,7 +21,7 @@ export default {
     },
     mounted() {
         axios
-            .get('http://localhost:51262/api/weather/weather?city=6548737')
+            .get('http://localhost:51262/api/weather/deCity?city=as')
             .then(response => (this.info = response));
     }
 }
